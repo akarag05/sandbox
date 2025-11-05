@@ -9,6 +9,3 @@ const first = async () => {
   }
 };
 first();
-// getText('./content/first.txt')
-//     .then(result => console.log(result))
-//     .catch((error) => {console.log(error)})
