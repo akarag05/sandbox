@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from "fs";
 
 const getText = (path: string) => {
   return new Promise((resolve, reject) => {
