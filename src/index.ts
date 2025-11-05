@@ -1,28 +1,14 @@
-import * as fs from "fs";
+import { readFile } from "fs/promises";
 
-const getText = (path: string) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, "utf8", (error: any, data: string) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(data);
-      }
-    });
-  });
-};
-
-const start = async () => {
+const first = async () => {
   try {
-    const first = await getText("./content/first.txt");
+    const first = await readFile("./content/first.txt");
     console.log(first);
   } catch (error) {
     console.log(error);
   }
 };
-
-start();
-
+first();
 // getText('./content/first.txt')
 //     .then(result => console.log(result))
 //     .catch((error) => {console.log(error)})
